@@ -1,0 +1,56 @@
+{
+ "allow_rename": 1,
+ "autoname": "field:kode",
+ "creation": "2020-04-08 17:29:56.060322",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "kode",
+  "nama_kota",
+  "kecamatan"
+ ],
+ "fields": [
+  {
+   "fieldname": "kode",
+   "fieldtype": "Data",
+   "label": "Kode",
+   "unique": 1
+  },
+  {
+   "fieldname": "nama_kota",
+   "fieldtype": "Data",
+   "label": "Nama Kota"
+  },
+  {
+   "fieldname": "kecamatan",
+   "fieldtype": "Data",
+   "label": "Kecamatan"
+  }
+ ],
+ "modified": "2020-04-08 19:42:13.543470",
+ "modified_by": "Administrator",
+ "module": "Library Qu",
+ "name": "Master Kota",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "nama_kota",
+ "show_preview_popup": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

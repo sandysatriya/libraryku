@@ -1,0 +1,95 @@
+{
+ "autoname": "naming_series:",
+ "beta": 1,
+ "creation": "2019-04-05 08:33:53.874451",
+ "description": "Request",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "id_member",
+  "nama_member",
+  "tanggal_pinjam",
+  "estimasi_tanggal_kembali",
+  "request_line",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Naming Series"
+  },
+  {
+   "fieldname": "id_member",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "ID Member",
+   "options": "Master Member",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "id_member.nama_member",
+   "fieldname": "nama_member",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Nama Member"
+  },
+  {
+   "fieldname": "tanggal_pinjam",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Tanggal Pinjam",
+   "reqd": 1
+  },
+  {
+   "fieldname": "estimasi_tanggal_kembali",
+   "fieldtype": "Date",
+   "label": "Estimasi Tanggal Kembali",
+   "read_only": 1
+  },
+  {
+   "fieldname": "request_line",
+   "fieldtype": "Table",
+   "label": "Data Request Buku",
+   "options": "Request Line"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Request Pinjaman",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-04-08 21:37:01.428370",
+ "modified_by": "Administrator",
+ "module": "Library Qu",
+ "name": "Request Pinjaman",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

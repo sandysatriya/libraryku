@@ -1,0 +1,106 @@
+{
+ "autoname": "naming_series:",
+ "beta": 1,
+ "creation": "2019-03-28 13:12:35.504852",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "id_member",
+  "nama_member",
+  "tanggal_pinjam",
+  "estimasi_tanggal_kembali",
+  "status",
+  "sb_section",
+  "data_pinjaman_buku"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Naming Series",
+   "read_only": 1
+  },
+  {
+   "fieldname": "id_member",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "ID Member",
+   "options": "Master Member",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "id_member.nama_member",
+   "fieldname": "nama_member",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Nama Member",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tanggal_pinjam",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Tanggal Pinjam",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "estimasi_tanggal_kembali",
+   "fieldtype": "Date",
+   "label": "Estimasi Tanggal Kembali",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "On Borrow\nClose",
+   "read_only": 1
+  },
+  {
+   "fieldname": "data_pinjaman_buku",
+   "fieldtype": "Table",
+   "label": "Data Pinjaman Buku",
+   "options": "Pinjaman Line",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "sb_section",
+   "fieldtype": "Section Break",
+   "label": "SB"
+  }
+ ],
+ "in_create": 1,
+ "modified": "2020-04-09 18:25:56.898720",
+ "modified_by": "Administrator",
+ "module": "Library Qu",
+ "name": "Pinjaman",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

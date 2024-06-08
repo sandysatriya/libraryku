@@ -1,0 +1,259 @@
+{
+ "_comments": "[]",
+ "allow_auto_repeat": 1,
+ "allow_import": 1,
+ "autoname": "format:SK-{jenis_kelamin}-{kota}-{#####}",
+ "creation": "2020-04-07 21:09:51.946716",
+ "description": "Description",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "jenis_kelamin",
+  "attach",
+  "attach_image",
+  "barcode",
+  "button",
+  "check",
+  "color",
+  "column_break_8",
+  "currency",
+  "data",
+  "date",
+  "datetime",
+  "float",
+  "text_editor",
+  "geo",
+  "int",
+  "fold",
+  "section_break_19",
+  "password",
+  "percent",
+  "section_break_aja_section",
+  "rate",
+  "html",
+  "html_editor",
+  "text_aja",
+  "small_text",
+  "ct",
+  "signature",
+  "kota",
+  "kota_nama",
+  "naming_series"
+ ],
+ "fields": [
+  {
+   "depends_on": "eval: doc.jenis_kelamin == \"Laki Laki\" || doc.jenis_kelamin == \"Perempuan\"",
+   "fieldname": "attach",
+   "fieldtype": "Attach",
+   "ignore_user_permissions": 1,
+   "label": "Attach",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "attach_image",
+   "fieldtype": "Attach Image",
+   "label": "Attach Image"
+  },
+  {
+   "columns": 5,
+   "description": "Description",
+   "fieldname": "jenis_kelamin",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Jenis Kelamin",
+   "no_copy": 1,
+   "options": "\nLaki Laki\nPerempuan",
+   "print_hide": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "barcode",
+   "fieldtype": "Barcode",
+   "label": "Barcode"
+  },
+  {
+   "fieldname": "button",
+   "fieldtype": "Button",
+   "label": "Button"
+  },
+  {
+   "default": "0",
+   "fieldname": "check",
+   "fieldtype": "Check",
+   "label": "Check"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Color",
+   "label": "Color"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Currency",
+   "label": "Currency"
+  },
+  {
+   "bold": 1,
+   "fieldname": "data",
+   "fieldtype": "Data",
+   "in_preview": 1,
+   "label": "Data",
+   "no_copy": 1,
+   "translatable": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "datetime",
+   "fieldtype": "Datetime",
+   "label": "Datetime"
+  },
+  {
+   "fieldname": "float",
+   "fieldtype": "Float",
+   "label": "Float"
+  },
+  {
+   "fieldname": "text_editor",
+   "fieldtype": "Text Editor",
+   "label": "Text Editor"
+  },
+  {
+   "fieldname": "geo",
+   "fieldtype": "Geolocation",
+   "in_standard_filter": 1,
+   "label": "Geo"
+  },
+  {
+   "fieldname": "int",
+   "fieldtype": "Int",
+   "label": "Int"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "label": "Password"
+  },
+  {
+   "fieldname": "fold",
+   "fieldtype": "Fold",
+   "label": "Fold"
+  },
+  {
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "percent",
+   "fieldtype": "Percent",
+   "label": "Percent"
+  },
+  {
+   "fieldname": "section_break_aja_section",
+   "fieldtype": "Section Break",
+   "label": "Section Break Aja"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Rating",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "html",
+   "fieldtype": "HTML",
+   "label": "HTML",
+   "options": "<h1>test</h1>"
+  },
+  {
+   "fieldname": "html_editor",
+   "fieldtype": "HTML Editor",
+   "label": "HTML Editor"
+  },
+  {
+   "fieldname": "text_aja",
+   "fieldtype": "Text",
+   "label": "Text Aja"
+  },
+  {
+   "fieldname": "small_text",
+   "fieldtype": "Small Text",
+   "label": "Small Text"
+  },
+  {
+   "fieldname": "ct",
+   "fieldtype": "Table",
+   "label": "CT",
+   "options": "Child Table"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Signature",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "kota",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Kota",
+   "options": "Master Kota"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Naming Series"
+  },
+  {
+   "fetch_from": "kota.nama_kota",
+   "fetch_if_empty": 1,
+   "fieldname": "kota_nama",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "label": "Nama Kota"
+  }
+ ],
+ "image_field": "attach_image",
+ "modified": "2020-04-08 20:43:28.909719",
+ "modified_by": "Administrator",
+ "module": "Library Qu",
+ "name": "All Fields",
+ "name_case": "UPPER CASE",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "route": "/all-fields",
+ "show_name_in_global_search": 1,
+ "show_preview_popup": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "jenis_kelamin",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

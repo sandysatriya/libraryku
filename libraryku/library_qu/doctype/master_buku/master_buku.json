@@ -1,0 +1,77 @@
+{
+ "autoname": "naming_series:",
+ "beta": 1,
+ "creation": "2019-03-28 13:01:37.130736",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "nama_buku",
+  "tipe_buku",
+  "tahun_cetak_buku",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Naming Series"
+  },
+  {
+   "fieldname": "nama_buku",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Nama Buku",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tipe_buku",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Tipe Buku",
+   "options": "Master Tipe Buku"
+  },
+  {
+   "fieldname": "tahun_cetak_buku",
+   "fieldtype": "Data",
+   "label": "Tahun Cetak Buku"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Available\nBorrowed",
+   "read_only": 1
+  }
+ ],
+ "modified": "2020-04-07 20:25:59.834219",
+ "modified_by": "Administrator",
+ "module": "Library Qu",
+ "name": "Master Buku",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "nama_buku",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
